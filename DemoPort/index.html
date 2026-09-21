@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>장미영 | 바이브코딩 · Python · HTML5 개발자</title>
+<meta name="description" content="바이브코딩, Python, HTML5를 주 분야로 하는 개발자 장미영의 포트폴리오입니다. 직접 실행해 볼 수 있는 프로젝트를 소개합니다.">
+<meta name="author" content="장미영">
+<meta name="theme-color" content="#0e1117">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="장미영 | 바이브코딩 · Python · HTML5 개발자">
+<meta property="og:description" content="아이디어를 바로 실행되는 결과물로 만드는 개발자 장미영의 포트폴리오.">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<script>
+  // 첫 화면이 깜빡이지 않도록 테마를 먼저 적용한다 (저장된 선택 > 시스템 설정 > 다크)
+  (function () {
+    var d = document.documentElement, t = null;
+    d.classList.add('js');
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') {
+      t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    d.setAttribute('data-theme', t);
+  })();
+</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="nav" id="top">
+  <div class="container nav-inner">
+    <a class="logo" href="#top" aria-label="장미영 포트폴리오 맨 위로">장미영<span>.</span></a>
+
+    <nav class="menu" id="menu" aria-label="주 메뉴">
+      <a href="#about">소개</a>
+      <a href="#skills">기술</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#contact">연락처</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="라이트 테마로 전환">
+        <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="메뉴 열기">
+        <svg class="i-open" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- Hero -->
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Developer Portfolio</p>
+        <h1 id="hero-title">장미영</h1>
+        <p class="role">아이디어를 <strong>바로 실행되는 결과물</strong>로 만드는 개발자</p>
+        <ul class="tags" aria-label="주 개발 분야">
+          <li>바이브코딩</li>
+          <li>Python</li>
+          <li>HTML5</li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">프로젝트 보기</a>
+          <a class="btn btn-ghost" href="#contact">연락하기</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="code-card">
+          <div class="code-bar"><i></i><i></i><i></i><span>vibe.py</span></div>
+<pre><code><span class="c"># 아이디어 → 프롬프트 → 프로토타입 → 검수</span>
+<span class="k">def</span> <span class="f">build</span>(idea):
+    draft = ai.<span class="f">generate</span>(idea)
+    <span class="k">return</span> me.<span class="f">review</span>(draft)
+
+stack = [<span class="s">"바이브코딩"</span>, <span class="s">"Python"</span>, <span class="s">"HTML5"</span>]</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">소개</h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <!-- TODO: 자기소개 문구가 확정되면 아래 문단을 교체하세요 (PRD 11장 미결 사항 1) -->
+          <p>안녕하세요, 개발자 장미영입니다. <strong>바이브코딩, Python, HTML5</strong>를 주 분야로, 떠오른 아이디어를 실제로 실행해 볼 수 있는 결과물로 만드는 일을 합니다.</p>
+          <p><strong>바이브코딩</strong>은 AI와 대화하며 아이디어를 빠르게 동작하는 결과물로 만드는 개발 방식입니다. 구현은 AI와 나누어 속도를 내고, 무엇을 만들지 정하는 일과 결과를 검수하는 일은 사람이 맡습니다.</p>
+          <p>설명보다 직접 써 보는 것이 빠르다고 생각해서, 이 사이트의 프로젝트는 가능한 한 바로 실행해 볼 수 있게 두었습니다.</p>
+        </div>
+
+        <aside class="about-card" data-reveal aria-label="프로필 요약">
+          <!-- TODO: 프로필 사진이 정해지면 .avatar를 <img src="assets/images/..." alt="장미영 프로필 사진">으로 교체 (PRD 11장 미결 사항 2) -->
+          <div class="avatar" aria-hidden="true">장</div>
+          <dl class="facts">
+            <div><dt>이름</dt><dd>장미영</dd></div>
+            <div><dt>이메일</dt><dd><a href="mailto:wlslove12@naver.com">wlslove12@naver.com</a></dd></div>
+            <div><dt>주 분야</dt><dd>바이브코딩 · Python · HTML5</dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <ul class="principles">
+        <li class="card" data-reveal>
+          <h3>빠르게 만들어 보기</h3>
+          <p>생각에만 머물지 않고 먼저 동작하는 버전을 만들어 확인합니다.</p>
+        </li>
+        <li class="card" data-reveal>
+          <h3>사람이 끝까지 검수하기</h3>
+          <p>AI가 만든 결과도 직접 실행하고 확인한 뒤에 내놓습니다.</p>
+        </li>
+        <li class="card" data-reveal>
+          <h3>실행되는 결과물로 말하기</h3>
+          <p>설명보다 직접 써 볼 수 있는 데모를 우선합니다.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section alt" id="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">Skills</p>
+        <h2 id="skills-title">기술</h2>
+        <p class="lead">숙련도 수치 대신, 각 기술로 만든 프로젝트를 함께 보여 드립니다.</p>
+      </header>
+
+      <div class="grid grid-3">
+        <article class="card skill" data-reveal>
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>
+          </div>
+          <h3>바이브코딩</h3>
+          <p>AI와 대화하며 아이디어를 빠르게 동작하는 프로토타입으로 만듭니다.</p>
+          <ul class="chips">
+            <li>프롬프트 설계</li><li>빠른 프로토타이핑</li><li>결과 검수</li><li>반복 개선</li>
+          </ul>
+          <p class="related">관련 프로젝트: <a href="#project-tetris">Tetris</a> · <a href="#project-snake">Snake vs AI</a></p>
+        </article>
+
+        <article class="card skill" data-reveal>
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7L3 12l5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+          </div>
+          <h3>Python</h3>
+          <p>게임과 로직이 있는 프로그램을 파이썬으로 구현합니다.</p>
+          <ul class="chips">
+            <li>tkinter</li><li>BFS 경로 탐색</li><li>게임 로직</li>
+          </ul>
+          <p class="related">관련 프로젝트: <a href="#project-snake">Snake: You vs AI</a></p>
+        </article>
+
+        <article class="card skill" data-reveal>
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg>
+          </div>
+          <h3>HTML5</h3>
+          <p>시맨틱 마크업과 캔버스로 브라우저에서 바로 동작하는 웹을 만듭니다.</p>
+          <ul class="chips">
+            <li>시맨틱 마크업</li><li>Canvas</li><li>CSS3</li><li>JavaScript</li><li>반응형</li>
+          </ul>
+          <p class="related">관련 프로젝트: <a href="#project-tetris">Tetris</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow">Projects</p>
+        <h2 id="projects-title">프로젝트</h2>
+        <p class="lead">직접 만든 결과물입니다. 눌러서 바로 실행해 보세요.</p>
+      </header>
+
+      <div class="grid grid-3" id="projectGrid"></div>
+      <noscript>
+        <p class="lead">프로젝트 목록을 보려면 JavaScript를 켜 주세요. 바로가기:
+          <a href="projects/tetris.html">Tetris</a> ·
+          <a href="projects/snake.py">Snake: You vs AI (소스 코드)</a></p>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section alt" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact-box" data-reveal>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">연락하기</h2>
+        <p class="lead">협업이나 문의는 이메일로 편하게 연락해 주세요.</p>
+        <a class="mail" href="mailto:wlslove12@naver.com">wlslove12@naver.com</a>
+        <div class="cta center">
+          <a class="btn btn-primary" href="mailto:wlslove12@naver.com">메일 보내기</a>
+          <button class="btn btn-ghost" id="copyBtn" type="button">이메일 복사</button>
+        </div>
+        <p class="copy-msg" id="copyMsg" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year">2026</span> 장미영. All rights reserved.</p>
+    <a href="#top">맨 위로 ↑</a>
+  </div>
+</footer>
+
+<dialog id="howto" aria-labelledby="howtoTitle">
+  <form method="dialog" class="dlg-head">
+    <h3 id="howtoTitle"></h3>
+    <button class="icon-btn" type="submit" aria-label="닫기">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </form>
+  <div class="dlg-body" id="howtoBody"></div>
+</dialog>
+</body>
+</html>
